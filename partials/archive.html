@@ -1,0 +1,53 @@
+<section class="todo">
+ 
+
+    <div class="ToDoApp">
+        <div class='controlsTop'> 
+
+   
+             <div class='pull-right'>
+              
+                <button type="button" class="btn btn-default btn-sm" ng-click="toggleList()">
+                    <span class="glyphicon glyphicon-minus"></span> hide Archives</span>
+                </button>    
+            </div>
+        </div>
+        
+        <hr>
+        <div class='output'>
+        
+           
+                    
+                <div  id="arch">
+                        <table class="table table-striped">
+                       <thead>
+                         <tr>
+                            <th></th>
+                            <th>Completed</th>
+                            <th><center>UnArchive</center></th>
+                            <th><center>Remove</center></th>
+                         </tr>
+                        </thead>
+                      <tbody>
+                    <tr ng-repeat="todo in todos | array | filter:search | orderBy:'date':false" ng-if="todo.archiveCheck !== false">
+                        <td>{{todo.text}}</td>
+                        <td>{{todo.date | date}}</td>
+                        <td><center><a href="" ng-click='undo(todo)'><span transit class="glyphicon glyphicon-refresh"></span></a></center></td>
+                        <td><center><a href="" ng-click='remove(todo.text)'><span transit class="glyphicon glyphicon-trash"></span></a></center></td>                        
+                        
+                    </tr>
+                  </tbody>
+
+                </table>
+
+        </div>
+               
+    
+
+        </div>
+        <hr>
+
+                 <input  type="text" ng-model="search.text" placeholder="Search" required/>
+       
+    </div>
+</section>

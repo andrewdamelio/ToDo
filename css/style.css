@@ -1,0 +1,121 @@
+
+
+.list-group-item-edit {
+position: relative;
+display: block;
+padding: 15px 10px;
+margin-bottom: -1px;
+background-color: #fff;
+border: 1px solid #ddd;
+   cursor: pointer; 
+   cursor: hand; 
+}
+
+
+
+
+
+h2 {
+  letter-spacing:13px
+}
+  
+
+.done-true {
+  text-decoration: line-through;
+  color: #D0D0D0;
+
+}
+.done-true,.done-false{
+   cursor: pointer; 
+   cursor: hand; 
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-size: 18px;
+
+}
+
+#colorPicker  {
+      width:75px;
+}
+  #datepicker{
+      width:160px;
+  }
+#toDoTextBox  {
+    width:210px;
+}
+
+.controlsTop{
+      height:25px;
+}
+
+
+.panel-body {
+  margin:5px;
+
+}
+
+.ToDoApp, .ToDoAppEdit{
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-size: 14px;
+    padding:30px;
+  
+    margin:auto;
+    border:1px dotted black;
+}
+.ToDoAppEdit{
+  text-align:center;
+}
+
+.ToDoAppEdit input{
+    height:30px;
+    width:255px;
+text-align:center;
+}
+
+
+.main {
+  width:37%;
+  margin:auto;
+  padding-top:50px;
+ 
+}
+
+ input {
+  height:30px;
+  vertical-align:top;
+
+}
+.controlsBottom  {
+  height:30px;
+  width:450px;
+  margin-left:15px;
+}
+
+
+.submit{
+  vertical-align:top;
+  height:30px;
+  width:100px;
+}
+.badge-grey{
+  padding: 3px 7px 3px;
+  font-size: 12.025px;
+  font-weight: bold;
+  white-space: nowrap;
+  color: #000000;
+  background-color: #eeeeff;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+   border-radius: 50%;
+  }
+
+  .badge-black{
+  padding: 3px 7px 3px;
+  font-size: 12.025px;
+  font-weight: bold;
+  white-space: nowrap;
+  color: #FFFFFF;
+  background-color: #000000;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+   border-radius: 50%;
+  }

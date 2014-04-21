@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en" ng-app="ToDoApp">
+<head>
+  <meta charset="UTF-8">
+  <title>ToDo</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+</head>
+
+<body >
+
+<div class="main" ng-controller="MainCtrl">
+
+  <div class="app hidden">
+  <div class="panel panel-default">
+    <div class="btn pull-right" ng-click='logout()'>Logout: {{newUser.id}}</div>
+    <div class="panel-heading"><h2><img src="assets/logo.png" height="45px"/>todo</h2></div>
+    <div class="panel-body">
+          <div ng-view></div>
+    </div>
+    <div class="panel-footer">
+      <div class="pull-right">
+        <font size="-2" ><b>built with&nbsp;</b><sup>
+                <a href="https://angularjs.org/"><img src="assets/angular.png" height="20px"/></a>&nbsp;&nbsp;
+                <a href="https://www.firebase.com/"><img src="assets/firebase.jpeg" height="20px"/></a></sup></font>
+      </div><br>
+    </div>
+  </div>
+  
+    </div>
+    <div class="login">
+
+     <div class="panel panel-default">
+      <div class="panel-heading"><h2><img src="assets/logo.png" height="45px"/>todo</h2></div>
+      <div class="panel-body">
+                  <center>
+              <input ng-model="newUser.id" type="text"  placeholder="username">
+        <button ng-click="setUser(newUser.id)" class="btn btn-sm btn-primary">Login</button><p>
+      </center>
+      </div>
+      <div class="panel-footer">
+        <div class="pull-right">
+          <font size="-2" ><b>built with&nbsp;</b><sup>
+                  <a href="https://angularjs.org/"><img src="assets/angular.png" height="20px"/></a>&nbsp;&nbsp;
+                  <a href="https://www.firebase.com/"><img src="assets/firebase.jpeg" height="20px"/></a></sup></font>
+        </div><br>
+      </div>
+ 
+    </div>
+    </div>
+	
+
+</div>
+</body>
+</html>
+
+
+
+
+  <script src='lib/jquery.min.js'></script>
+  <script src="lib/jquery.transit.min.js"></script>
+  <script src="lib/angular.min.js"></script> 
+  
+
+  <script src="https://cdn.firebase.com/v0/firebase.js"></script>
+  <script src="bower_components/angularfire/angularfire.js"></script>
+<script src="lib/angular-route.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controllers.js"></script>
+  
+
+  
+  
+  <datalist id="colors">
+  <option>#ffffc1</option> 
+  <option>#e1ffe1</option> 
+  <option>#ffe6eb</option> 
+  <option>#e8f0ff</option> 
+  <option>#ffff80</option> 
+</datalist>
+  
+</body>
+
+</html>
