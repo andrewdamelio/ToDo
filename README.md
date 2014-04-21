@@ -1,2 +1,2 @@
-ToDo - Angular / Firebase 
+ToDo - AngularJS / Firebase 
 ====
