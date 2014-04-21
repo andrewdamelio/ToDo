@@ -2,7 +2,7 @@
 <html lang="en" ng-app="ToDoApp">
 <head>
   <meta charset="UTF-8">
-  <title>ToDo</title>
+  <title>ToDo AngularJS</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 
@@ -14,7 +14,7 @@
 
   <div class="app hidden">
   <div class="panel panel-default">
-    <div class="btn pull-right" ng-click='logout()'>Logout: {{newUser.id}}</div>
+    <div class="btn pull-right" ng-click='logout()'>Logout</div>
     <div class="panel-heading"><h2><img src="assets/logo.png" height="45px"/>todo</h2></div>
     <div class="panel-body">
           <div ng-view></div>
@@ -35,8 +35,8 @@
       <div class="panel-heading"><h2><img src="assets/logo.png" height="45px"/>todo</h2></div>
       <div class="panel-body">
                   <center>
-              <input ng-model="newUser.id" type="text"  placeholder="username">
-        <button ng-click="setUser(newUser.id)" class="btn btn-sm btn-primary">Login</button><p>
+              <input ng-model="newUser.id" type="text" >
+        <button ng-click="setUser(newUser.id)" class="btn btn-sm btn-primary">Join List</button><p>
       </center>
       </div>
       <div class="panel-footer">
