@@ -19,6 +19,7 @@ controllers.controller('MainCtrl',['$scope', '$window', 'FirebaseService','$loca
     }
  //test
 
+
     $scope.setUser = function(user) {
            console.log(user);
            FirebaseService.setUser(user);
