@@ -8,7 +8,7 @@ margin-bottom: -1px;
 background-color: #fff;
 border: 1px solid #ddd;
    cursor: pointer; 
-   cursor: hand; 
+
 }
 
 
@@ -57,27 +57,42 @@ h2 {
    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
    font-size: 14px;
     padding:30px;
-  
     margin:auto;
-    border:1px dotted black;
+    border:1px solid black;
 }
 .ToDoAppEdit{
   text-align:center;
 }
 
-.ToDoAppEdit input{
-    height:30px;
-    width:255px;
-text-align:center;
+.login{
+    text-align:center;
+}
+.login input{
+    width:35%;
 }
 
+.ToDoAppEdit input{
+    height:30px;  
+    text-align:center;
+}
 
-.main {
-  width:37%;
+  @media all and (min-width:800px)  {.main { width:800px;}}
+  @media (min-width:800px) {.main { width:800px;} }
+
+  @media all and (min-width:800px)  {.ToDoAppEdit input { width:50%;}}
+  @media (min-width:800px) {.ToDoAppEdit input { width:50%;} }
+  @media (max-width:799px) {.ToDoAppEdit input { width:100%;} }
+
+.main {  
   margin:auto;
   padding-top:50px;
  
 }
+
+ .output {
+  padding-left:30px;
+
+ }
 
  input {
   height:30px;
@@ -86,7 +101,7 @@ text-align:center;
 }
 .controlsBottom  {
   height:30px;
-  width:450px;
+  width:435px;
   margin-left:15px;
 }
 
