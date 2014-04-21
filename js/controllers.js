@@ -17,6 +17,7 @@ controllers.controller('MainCtrl',['$scope', '$window', 'FirebaseService','$loca
          $(".login").removeClass("hidden");
            $location.path("/"); 
     }
+ //test
 
     $scope.setUser = function(user) {
            console.log(user);
