@@ -1,8 +1,6 @@
 var controllers = angular.module('controllers', []);
  
 
- 
-
 controllers.controller('MainCtrl',['$scope', '$window', 'FirebaseService','$location',  function($scope, $window, FirebaseService, $location) {
     
 

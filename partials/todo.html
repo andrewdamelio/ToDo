@@ -33,21 +33,18 @@
         <hr>
         <div class='output'>
         
-            <table class="list-group">
-                <tr class="list-group-item-edit" style="background: {{todo.bg}}"   ng-click='toogleStatus(todo)'  ng-repeat="todo in todos | array | filter:{done: returnSort()}" ng-if="!todo.archiveCheck" >
-                  <td width="600px">
-                    <span class="done-{{todo.done}}" >{{todo.text}}</span>
-                  </td>
+            <div class="list-group">
+                <div class="list-group-item-edit" style="background: {{todo.bg}}"   ng-click='toogleStatus(todo)'  ng-repeat="todo in todos | array | filter:{done: returnSort()}" ng-if="!todo.archiveCheck" >
+                 
+            <span class="done-{{todo.done}}" >{{todo.text}}</span>
+        
 
-                  <td>
-                    <span class='pull-right'><a href="#/{{todo.index}}"><span transit class="glyphicon glyphicon-pencil"></span></a></span>
+            <a href="#/{{todo.index}}"><span transit class="edit glyphicon glyphicon-pencil pull-right"></span></a>
                    
                     
 
-               
-                </td>
             
-                </tr></table>
+                </div></div>
                     
               
     
