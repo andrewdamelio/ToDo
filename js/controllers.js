@@ -11,7 +11,6 @@ controllers.controller('MainCtrl',['$scope', '$window', 'FirebaseService','$loca
     $scope.sortHolder='';
 
     $scope.logout =function() {
-        console.log("HI")
          $scope.newUser='';
          $(".app").addClass("hidden");
          $(".login").removeClass("hidden");
@@ -21,7 +20,6 @@ controllers.controller('MainCtrl',['$scope', '$window', 'FirebaseService','$loca
 
 
     $scope.setUser = function(user) {
-           console.log(user);
            FirebaseService.setUser(user);
            $scope.todos = FirebaseService.returnToDo(FirebaseService.getUser());
            $(".app").removeClass("hidden");
@@ -113,11 +111,10 @@ controllers.controller('ToDoEdit', ['$scope', '$routeParams', 'FirebaseService',
        var indexKey;
 
         angular.forEach(keys, function(key) {           // make into fireservice index function lookup takes index and treutrns keyIndex
-           if (itemId === $scope.todos[key].text) {
+           if (itemId === $scope.todos[key].$$hashKey) {
              indexKey=key;
            }
         });       
-
        $scope.editText=$scope.todos[indexKey].text;
        $scope.editColor=$scope.todos[indexKey].bg;
        var todo = $scope.todos[indexKey];
@@ -139,15 +136,17 @@ controllers.controller('ToDoArchive',['$scope', 'FirebaseService', function($sco
         FirebaseService.updateFirebase();
     };   
   
-    $scope.remove = function (text) { 
+    $scope.remove = function (id) { 
         var keys = $scope.todos.$getIndex();
         var indexKey;
-
+        
         angular.forEach(keys, function(key) { // make into fireservice index function lookup takes index and treutrns keyIndex
-           if (text === $scope.todos[key].text) {
+        
+           if (id === $scope.todos[key].$$hashKey) {
              indexKey=key;
            }
         });
+
         $scope.todos.$child(indexKey).$remove(); 
     };
     
