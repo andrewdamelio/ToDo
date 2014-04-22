@@ -64,7 +64,7 @@ h2 {
   text-align:center;
 }
 
-.login{
+.loginForm{
     text-align:center;
 }
 .login input{
@@ -76,23 +76,18 @@ h2 {
     text-align:center;
 }
 
-  @media all and (min-width:800px)  {.main { width:800px;}}
-  @media (min-width:800px) {.main { width:800px;} }
+  @media all and (min-width:650px)  {.main { width:650px;}}
+  @media (min-width:650px) {.main { width:650px;} }
 
-  @media all and (min-width:800px)  {.ToDoAppEdit input { width:50%;}}
-  @media (min-width:800px) {.ToDoAppEdit input { width:50%;} }
-  @media (max-width:799px) {.ToDoAppEdit input { width:100%;} }
+  @media all and (min-width:401px)  {.ToDoAppEdit input { width:300px;}}
+  @media (min-width:401px) {.ToDoAppEdit input { width:300px;} }
+  @media (max-width:400px) {.ToDoAppEdit input { width:100%;} }
 
 .main {  
   margin:auto;
   padding-top:50px;
  
 }
-
- .output {
-  padding-left:30px;
-
- }
 
  input {
   height:30px;
