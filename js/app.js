@@ -23,17 +23,15 @@ ToDoApp.config(['$routeProvider', function($routeProvider) {
   });
 }]);  
 
-ToDoApp.directive('foot', [function () {
+ToDoApp.directive('footer', [function () {
   return {
     restrict: 'E',
-    template: "<div class='btn'>XXX</div>",
-    link: function (scope, iElement, iAttrs) {
-              iElement.on('click', function(){ 
-                alert('hi')
-              })
-    }
-  };
+    replace:  true,
+    template: "<div class='panel-footer'><div class='pull-right'><font size='-2' ><b>built with&nbsp;</b><sup><a href='https://angularjs.org/'><img src='assets/angular.png' height='20px'/></a>&nbsp;&nbsp;<a href='https://www.firebase.com/'><img src='assets/firebase.jpeg' height='20px'/></a></sup></font></div></br></div>"
+  }
 }])
+         
+
 
 ToDoApp.filter('array', function() {
   return function(items) {
@@ -73,7 +71,7 @@ ToDoApp.factory('FirebaseService', function ($firebase) {
 
       var returnToDo = function(user) {
           if (!user) {
-           myDataRef = new Firebase('https://nero.firebaseio.com/'); 
+           myDataRef = new Firebase('https://nero.firebaseio.com/andydrew'); 
           }
           else {
             myDataRef = new Firebase('https://nero.firebaseio.com/'+user);
