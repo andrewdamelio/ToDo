@@ -6,7 +6,6 @@ var controllers = angular.module('controllers', []);
 controllers.controller('MainCtrl',['$scope', '$window', 'FirebaseService','$location',  function($scope, $window, FirebaseService, $location) {
     
 
-    //$scope.todos = FirebaseService.returnToDo('andydrew');
     $scope.newTodoBg='#FFFFFF';
     $scope.sortHolder='';
 
