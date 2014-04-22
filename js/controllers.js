@@ -6,7 +6,7 @@ var controllers = angular.module('controllers', []);
 controllers.controller('MainCtrl',['$scope', '$window', 'FirebaseService','$location',  function($scope, $window, FirebaseService, $location) {
     
 
-    $scope.todos = FirebaseService.returnToDo('test');
+    //$scope.todos = FirebaseService.returnToDo('andydrew');
     $scope.newTodoBg='#FFFFFF';
     $scope.sortHolder='';
 
@@ -110,8 +110,8 @@ controllers.controller('ToDoEdit', ['$scope', '$routeParams', 'FirebaseService',
        var itemId = $routeParams.itemId;
        var indexKey;
 
-        angular.forEach(keys, function(key) {           // make into fireservice index function lookup takes index and treutrns keyIndex
-           if (itemId === $scope.todos[key].$$hashKey) {
+        angular.forEach(keys, function(key) {   
+           if (itemId === $scope.todos[key].index) {
              indexKey=key;
            }
         });       
@@ -142,7 +142,7 @@ controllers.controller('ToDoArchive',['$scope', 'FirebaseService', function($sco
         
         angular.forEach(keys, function(key) { // make into fireservice index function lookup takes index and treutrns keyIndex
         
-           if (id === $scope.todos[key].$$hashKey) {
+           if (id === $scope.todos[key].index) {
              indexKey=key;
            }
         });
@@ -159,22 +159,27 @@ controllers.controller('ToDoArchive',['$scope', 'FirebaseService', function($sco
 controllers.controller('ToDoCtrl',['$scope', 'FirebaseService', function($scope, FirebaseService ) {
     $scope.setSort($scope.sortHolder);
 
+    $scope.rand = function() {
+            return Math.random().toString(36).substr(2); // remove `0.`
+    };
+    
+
     $scope.addTodo = function () {
          $scope.todos.$add({              // used to be $scope.myDataRef.push({
                 text: $scope.newTodoText,
                 done: false,
                 date: '',
                 bg:   $scope.newTodoBg ? $scope.newTodoBg : '',
-                archiveCheck: false
+                archiveCheck: false,
+                index: $scope.rand()
             });
 
 
 
             $scope.clearData();                          // clear newTodo data object
             $scope.bounce();                             // call bounce animation --> NEEDS TO BE UPDATED with nganiamte
-           
-     
-    };  
+    };            
+    
 
     $scope.clearData = function () {
         $scope.newTodoText=''

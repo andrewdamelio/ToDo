@@ -33,7 +33,7 @@
                         <td>{{todo.text}}</td>
                         <td>{{todo.date | date}}</td>
                         <td><center><a href="" ng-click='undo(todo)'><span transit class="glyphicon glyphicon-refresh"></span></a></center></td>
-                        <td><center><a href="" ng-click='remove(todo.$$hashKey)'><span transit class="glyphicon glyphicon-trash"></span></a></center></td>                        
+                        <td><center><a href="" ng-click='remove(todo.index)'><span transit class="glyphicon glyphicon-trash"></span></a></center></td>                        
                         
                     </tr>
                   </tbody>
