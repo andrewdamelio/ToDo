@@ -1,0 +1,62 @@
+<section>
+
+    <div class='controlsTop'> 
+        <div class="row">
+               
+
+                <div class="spacer">
+                    <span class="badge">{{getLeftTodo()}}</span><sup>left</sup>
+                </div>            
+                <div class="spacer">
+                    <div sort class="btn-group">
+                        <button  type="button" class="btn btn-sm" ng-class="{'btn-default':sorts[0]}"   id="false"  ng-click="setSort('Active')">Active</button>
+                        <button type="button" class="btn btn-sm" ng-class="{'btn-default':sorts[1]}"   id="all"    ng-click="setSort('All')">All</button>
+                        <button type="button" class="btn btn-sm" ng-class="{'btn-default':sorts[2]}"   id="true"   ng-click="setSort('Complete')">Complete</button>
+                    </div>
+                </div>
+            
+                <div class='pull-right'>
+                    <span ng-show='getDoneTodo()>0'>
+                    <button type="button" class="btn btn-default btn-sm" ng-click="archive()">
+                        <span class="glyphicon glyphicon-ok"></span> Archive ({{getDoneTodo()}})
+                    </button>    
+                    </span>
+                
+                    <button type="button" class="btn btn-default btn-sm" ng-click="toggleArchives()">
+                        <span class="glyphicon glyphicon-plus"></span> show Archives</span>
+                    </button>    
+            </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <div class='output'>
+        <div class="list list-group"> <!-- sortable -->
+            <div  class="listItem list-group-item-edit" ng-style="{ 'background' :  todo.bg}" ng-click='toogleStatus(todo)' ng-repeat="todo in todos | array | filter:{done: sort}" ng-if="!todo.archiveCheck">
+                <span class="todo" ng-class="{done:todo.done}">{{todo.text}}</span>
+                <a href="#/item/{{todo.index}}"><span class="image-hover edit glyphicon glyphicon-pencil pull-right"></span></a>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <div class='controlsBottom'>
+        <form ng-submit="addTodo()" >
+            <div>
+                <div class="input-group input-group-sm" >
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-pushpin"></span></span>
+                    <input class='form-control' type="text" id='toDoTextBox' ng-model="newTodoText" placeholder="add new todo item" required/>
+
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-tint"></span></span>
+                    <input class='form-control' type="color" list="colors" id='colorPicker' ng-model='newTodoBg'/>
+                   
+                    <span class="input-group-btn">
+                        <button class="submit btn btn-default" type="submit">Add</button>
+                    </span>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</section>

@@ -1,0 +1,221 @@
+html {
+  overflow: -moz-scrollbars-vertical; 
+  overflow-y: scroll;
+}
+
+h2 {
+  letter-spacing:13px
+}
+ 
+.spacer {
+    padding-left:30px;
+    float: left;
+}
+ 
+
+.main {  
+  margin:auto;
+  padding-top:25px;
+ 
+}
+
+ input {
+  height:30px;
+  vertical-align:top;
+
+}
+
+.editControls input#text {
+    width:300px;
+    text-align:center;
+}
+
+.editControls {
+  margin:auto;
+  width:500px;
+}
+.app, .login {
+    visibility: hidden;
+}
+.submit{
+  vertical-align:top;
+  height:30px;
+  width:100px;
+}
+
+.github :hover {
+    fill: white;
+}
+.search {
+    padding-right: 30px;
+}
+
+.search + .glyphicon {
+    position: absolute;
+    right: 0;
+    padding: 9px 27px;
+}
+
+
+.search-focus {
+   color: #66AFE9;
+}
+
+
+.list-group-item-edit {
+  position: relative;
+  display: block;
+  padding: 15px 10px;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  cursor: pointer; 
+
+}
+
+.edit {
+  text-align:center;
+  width:35px;
+}
+
+
+
+
+
+.done {
+  text-decoration: line-through;
+  color: #D0D0D0;
+
+}
+.todo{
+   cursor: pointer; 
+   cursor: hand; 
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-size: 18px;
+
+}
+
+#colorPicker  {
+      width:75px;
+}
+
+#toDoTextBox  {
+    width:200px;
+}
+
+.controlsTop{
+      
+      width:100%;
+
+}
+
+.controlsBottom  {
+  height:30px;
+  width:15px;
+  margin-left:15px;
+}
+
+
+.panel-body {
+  margin:5px;
+
+}
+
+.ToDoApp, .ToDoAppEdit{
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-size: 14px;
+    padding:30px;
+    margin:auto;
+    border:1px solid black;
+}
+.ToDoAppEdit{
+  text-align:center;
+}
+
+.loginForm{
+    text-align:center;
+}
+.login input{
+    width:35%;
+}
+
+.ToDoAppEdit input {
+    height:30px;  
+    text-align:center;
+}
+
+  @media all and (min-width:650px)  {.main { width:650px;}}
+  @media (min-width:650px) {.main { width:650px;} }
+
+  @media all and (min-width:401px)  {.ToDoAppEdit input { width:300px;}}
+  @media (min-width:401px) {.ToDoAppEdit input { width:300px;} }
+  @media (max-width:400px) {.ToDoAppEdit input { width:100%;} }
+
+
+
+.image-hover {
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+.image-hover:hover {
+     transform:scale(1.6);
+    -ms-transform:scale(1.6); /* IE 9 */
+    -moz-transform:scale(1.6); /* Firefox */
+    -webkit-transform:scale(1.6); /* Safari and Chrome */
+    -o-transform:scale(1.6); /* Opera */
+}
+
+.chart {
+  box-sizing: border-box;
+  width: 550px;
+  height: 450px;
+  padding: 20px 15px 15px 15px;
+  margin: 15px auto 30px auto;
+  border: 1px solid #ddd;
+  background: #fff;
+  background: linear-gradient(#f6f6f6 0, #fff 50px);
+  background: -o-linear-gradient(#f6f6f6 0, #fff 50px);
+  background: -ms-linear-gradient(#f6f6f6 0, #fff 50px);
+  background: -moz-linear-gradient(#f6f6f6 0, #fff 50px);
+  background: -webkit-linear-gradient(#f6f6f6 0, #fff 50px);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  -o-box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  -ms-box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.chart-container {
+  box-sizing: border-box;
+  width: 550px;
+  height: 450px;
+  padding: 20px 15px 15px 15px;
+  margin: 15px auto 30px auto;
+  border: 1px solid #ddd;
+  background: #fff;
+  background: linear-gradient(#f6f6f6 0, #fff 50px);
+  background: -o-linear-gradient(#f6f6f6 0, #fff 50px);
+  background: -ms-linear-gradient(#f6f6f6 0, #fff 50px);
+  background: -moz-linear-gradient(#f6f6f6 0, #fff 50px);
+  background: -webkit-linear-gradient(#f6f6f6 0, #fff 50px);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  -o-box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  -ms-box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.chart-placeholder {
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  line-height: 1.2em;
+}
+
+
+ [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
